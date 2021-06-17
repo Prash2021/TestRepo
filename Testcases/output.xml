@@ -1,0 +1,121 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 4.0b1 (Python 3.8.2 on win32)" generated="20210615 16:33:45.291" rpa="false">
+<suite id="s1" name="RegistrationTC" source="C:\Users\Prashanth\PycharmProjects\RobotAutomation\Testcases\RegistrationTC">
+<suite id="s1-s1" name="TC 003 Start Close Browser" source="C:\Users\Prashanth\PycharmProjects\RobotAutomation\Testcases\RegistrationTC\TC_003_Start_Close_Browser.robot">
+<test id="s1-s1-t1" name="Robot Second Test Case">
+<kw name="Start Browser and Maximize" library="Resource1" type="setup">
+<kw name="Open Browser" library="SeleniumLibrary">
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<arguments>
+<arg>${url}</arg>
+<arg>${Browser}</arg>
+</arguments>
+<msg timestamp="20210615 16:33:45.666" level="INFO">Opening browser 'Chrome' to base url 'http://www.thetestingworld.com/testing'.</msg>
+<status status="PASS" starttime="20210615 16:33:45.666" endtime="20210615 16:33:59.212"></status>
+</kw>
+<kw name="Maximize Browser Window" library="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" starttime="20210615 16:33:59.213" endtime="20210615 16:33:59.368"></status>
+</kw>
+<status status="PASS" starttime="20210615 16:33:45.666" endtime="20210615 16:33:59.368"></status>
+</kw>
+<kw name="Set Selenium Implicit Wait" library="SeleniumLibrary">
+<doc>Sets the implicit wait value used by Selenium.</doc>
+<arguments>
+<arg>2 seconds</arg>
+</arguments>
+<status status="PASS" starttime="20210615 16:33:59.368" endtime="20210615 16:33:59.368"></status>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<doc>Click the element identified by ``locator``.</doc>
+<arguments>
+<arg>xpath://a[text()= 'Login']</arg>
+</arguments>
+<msg timestamp="20210615 16:33:59.368" level="INFO">Clicking element 'xpath://a[text()= 'Login']'.</msg>
+<status status="PASS" starttime="20210615 16:33:59.368" endtime="20210615 16:34:00.696"></status>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<arguments>
+<arg>name:username</arg>
+<arg>Prashanth</arg>
+</arguments>
+<msg timestamp="20210615 16:34:00.696" level="INFO">Typing text 'Prashanth' into text field 'name:username'.</msg>
+<status status="PASS" starttime="20210615 16:34:00.696" endtime="20210615 16:34:00.806"></status>
+</kw>
+<kw name="Press Key" library="SeleniumLibrary">
+<doc>*DEPRECATED in SeleniumLibrary 4.0.* use `Press Keys` instead.</doc>
+<arguments>
+<arg>name:password</arg>
+<arg>kumar</arg>
+</arguments>
+<msg timestamp="20210615 16:34:00.806" level="WARN">Keyword 'SeleniumLibrary.Press Key' is deprecated. use `Press Keys` instead.</msg>
+<status status="PASS" starttime="20210615 16:34:00.806" endtime="20210615 16:34:00.874"></status>
+</kw>
+<kw name="Fetch Data Title" library="Resource1">
+<kw name="Get Title" library="SeleniumLibrary">
+<doc>Returns the title of the current page.</doc>
+<assign>
+<var>${page_title}</var>
+</assign>
+<msg timestamp="20210615 16:34:00.881" level="INFO">${page_title} = Login</msg>
+<status status="PASS" starttime="20210615 16:34:00.875" endtime="20210615 16:34:00.881"></status>
+</kw>
+<kw name="Log" library="BuiltIn">
+<doc>Logs the given message with the given level.</doc>
+<arguments>
+<arg>${page_title}</arg>
+</arguments>
+<msg timestamp="20210615 16:34:00.882" level="INFO">Login</msg>
+<status status="PASS" starttime="20210615 16:34:00.881" endtime="20210615 16:34:00.882"></status>
+</kw>
+<status status="PASS" starttime="20210615 16:34:00.875" endtime="20210615 16:34:00.882"></status>
+</kw>
+<kw name="Fetch Data current url" library="Resource1">
+<kw name="Get Location" library="SeleniumLibrary">
+<doc>Returns the current browser window URL.</doc>
+<assign>
+<var>${page_loc}</var>
+</assign>
+<msg timestamp="20210615 16:34:00.887" level="INFO">${page_loc} = https://www.thetestingworld.com/index.php?option=com_users&amp;view=login&amp;Itemid=587</msg>
+<status status="PASS" starttime="20210615 16:34:00.883" endtime="20210615 16:34:00.887"></status>
+</kw>
+<kw name="Log" library="BuiltIn">
+<doc>Logs the given message with the given level.</doc>
+<arguments>
+<arg>${page_loc}</arg>
+</arguments>
+<msg timestamp="20210615 16:34:00.888" level="INFO">https://www.thetestingworld.com/index.php?option=com_users&amp;view=login&amp;Itemid=587</msg>
+<status status="PASS" starttime="20210615 16:34:00.888" endtime="20210615 16:34:00.888"></status>
+</kw>
+<status status="PASS" starttime="20210615 16:34:00.883" endtime="20210615 16:34:00.888"></status>
+</kw>
+<kw name="Close browser window" library="Resource1" type="teardown">
+<kw name="Close Browser" library="SeleniumLibrary">
+<doc>Closes the current browser.</doc>
+<status status="PASS" starttime="20210615 16:34:00.889" endtime="20210615 16:34:03.201"></status>
+</kw>
+<status status="PASS" starttime="20210615 16:34:00.889" endtime="20210615 16:34:03.201"></status>
+</kw>
+<doc>This test case is used to verify current url of the page</doc>
+<status status="PASS" starttime="20210615 16:33:45.666" endtime="20210615 16:34:03.201"></status>
+</test>
+<status status="PASS" starttime="20210615 16:33:45.338" endtime="20210615 16:34:03.201"></status>
+</suite>
+<status status="PASS" starttime="20210615 16:33:45.291" endtime="20210615 16:34:03.201"></status>
+</suite>
+<statistics>
+<total>
+<stat pass="1" fail="0" skip="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat pass="1" fail="0" skip="0" id="s1" name="RegistrationTC">RegistrationTC</stat>
+<stat pass="1" fail="0" skip="0" id="s1-s1" name="TC 003 Start Close Browser">RegistrationTC.TC 003 Start Close Browser</stat>
+</suite>
+</statistics>
+<errors>
+<msg timestamp="20210615 16:34:00.806" level="WARN">Keyword 'SeleniumLibrary.Press Key' is deprecated. use `Press Keys` instead.</msg>
+</errors>
+</robot>
